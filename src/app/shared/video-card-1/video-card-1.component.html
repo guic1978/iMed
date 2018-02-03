@@ -1,0 +1,17 @@
+<div class="card card-dark">
+  <!--Card image-->
+  <img class="img-fluid" style="height: 180px" [src]="sanitize(palestra.items[0].snippet.thumbnails.default.url)" alt="Card image cap">
+  <!--Card content-->
+  <div class="card-body">
+    <!--Title-->
+    <h5 class="card-title">
+      <span style="display: -webkit-box!important; -webkit-line-clamp: 2; width: 100%; overflow: hidden;
+      text-overflow: ellipsis; height: 36px; min-height: 42px; white-space: normal;">
+          {{ palestra.items[0].snippet.title }}
+      </span>
+    </h5>
+    <!--Text-->
+    <p class="card-text">Palestrante</p>
+    <a [routerLink]="['/palestra', palestra.items[0].id ]" class="btn btn-primary waves-light" mdbRippleRadius>Assista</a>
+  </div>
+</div>
